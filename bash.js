@@ -12,8 +12,8 @@ process.stdin.on('data', function (data) {
     //  commands[cmdArr[0]]();
     // }
     // else {
-      var restOfArg = cmdArr.slice(1).join(' ');
-      commands[cmdArr[0]](restOfArg);
+      var args = cmdArr.slice(1).join(' ');
+      commands[cmdArr[0]](args);
     // }
 
   });
