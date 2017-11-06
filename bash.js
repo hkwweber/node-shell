@@ -7,7 +7,8 @@ process.stdin.on('data', function (data) {
   if (cmd === "pwd") {
       output = __dirname;
   } else if (cmd === "date") {
-      output = Date.now();
+      let datetime = new Date();
+      output = datetime.toString();
   }
 
 
@@ -15,3 +16,5 @@ process.stdin.on('data', function (data) {
   process.stdout.write('\nprompt > ');
 
 });
+
+require("./fileb.js")
