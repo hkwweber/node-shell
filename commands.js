@@ -26,3 +26,25 @@ exports.ls = function(){
   //process.stdout.write()
 }
 
+exports.echo = function(str) {
+  //
+
+  process.stdout.write(str + "\n");
+  process.stdout.write("prompt > ");
+}
+
+exports.cat = function(file) {
+  fs.readFile('file',function(err,data) {
+    if (err) throw err;
+    process.stdout.write(data + "\n");
+  })
+  // files.forEach(function(file) {
+    // process.stdout.write(file.toString() + "\n");
+  // })
+
+  process.stdout.write("prompt > ");
+
+}
+
+
+
