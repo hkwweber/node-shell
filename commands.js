@@ -34,7 +34,7 @@ exports.echo = function(str) {
 }
 
 exports.cat = function(file) {
-  fs.readFile('file',function(err,data) {
+  fs.readFile(file, function(err,data) {
     if (err) throw err;
     process.stdout.write(data + "\n");
   })
@@ -43,7 +43,19 @@ exports.cat = function(file) {
   // })
 
   process.stdout.write("prompt > ");
+}
 
+exports.head = function(file) {
+  fs.readFile(file, function(err,data) {
+    if (err) throw err;
+    var linesArr = data.toString().split("\n");
+    for (var i = 0; i < 5; i++) {
+      process.stdout.write(linesArr[i]);
+      process.stdout.write("\n");
+      
+    }
+  })
+  //process.stdout.write("prompt > ");
 }
 
 

@@ -1,4 +1,3 @@
-
 var commands = require('./commands.js');
 
 process.stdout.write('prompt > ');
